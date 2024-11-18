@@ -1,42 +1,43 @@
 import React from "react";
+import CardItems from "./CardItems";
 
 const NewCollection = () => {
   const newCollectionArray = [
     {
       img: "card-1.png",
       name: "Loro Piana",
-      text: "1Lorem ipsum dolor sit amet",
+      text: "Slim-Fit Striped Silk and Linen-Blend Polo Shirt",
       price: "$52",
     },
     {
       img: "card-2.png",
-      name: "Loro Piana",
-      text: "2Lorem ipsum dolor sit amet",
+      name: "White Pants",
+      text: "Slim Fit Man Pants",
       price: "$90",
     },
     {
       img: "card-3.png",
-      name: "Loro Piana",
-      text: "3Lorem ipsum dolor sit amet",
-      price: "$52",
+      name: "Bhida Glasses",
+      text: "Black Glasses with Luxury Finishing",
+      price: "$50",
     },
     {
       img: "card-4.png",
-      name: "Loro Piana",
-      text: "4Lorem ipsum dolor sit amet",
+      name: "Brown Bomber",
+      text: "Luxury Unisex Bomber Jacket",
       price: "$52",
     },
     {
       img: "card-5.png",
-      name: "Loro Piana",
-      text: "666Lorem ipsum dolor sit amet",
+      name: "Leather Shoes Jack",
+      text: "Man Leather Shoes",
       price: "$89",
     },
     {
       img: "card-6.png",
-      name: "Loro Piana",
-      text: "666Lorem ipsum dolor sit amet",
-      price: "$52",
+      name: "Grey Tshirt",
+      text: "Unisex grey tshirt",
+      price: "$21",
     },
   ];
 
@@ -52,7 +53,11 @@ const NewCollection = () => {
         </div>
 
         {/* CONTENTS */}
-        <div className=" grid gap-5"></div>
+        <div className="grid md:grid-cols-3 gap-5 place-items-center py-10">
+          {newCollectionArray.map((item, key) => (
+            <CardItems item={item} key={key} />
+          ))}
+        </div>
       </div>
     </section>
   );

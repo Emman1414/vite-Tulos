@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  *{
+  /* *{
     @apply border border-red-500;
-  }
+  } */
   h1 {
     @apply text-[clamp(35px,_6vw,_50px)];
   }
@@ -51,9 +51,42 @@
     @apply max-w-[1850px] mx-auto px-4;
   }
 
+
+
   /* HEADER */
 
   .main-nav a {
     @apply gap-5;
+  }
+
+  .Navigation li{
+    @apply pb-2 md:pb-0;
+  }
+
+  .Navigation li:hover{
+    @apply border-b-2 border-black
+  }
+
+  footer ul li {
+    @apply opacity-50 font-semibold;
+  }
+  .footer-box h6 {
+    @apply font-bold text-[20px];
+  }
+
+  .menu-btn span {
+    @apply h-[3px] w-5 block mb-1 transition-all;
+  }
+
+  .menu-btn.active span:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  .menu-btn.active span:nth-child(1) {
+    @apply rotate-45 translate-y-3;
+  }
+
+  .menu-btn.active span:nth-child(3) {
+    @apply -rotate-45 -translate-y-[2px];
   }
 }
