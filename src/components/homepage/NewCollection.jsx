@@ -46,7 +46,7 @@ const NewCollection = () => {
       <div className="container">
         <div className="title flex flex-col text-center justify-center items-center">
           <h1 className="uppercase">New Collection</h1>
-          <h6 className="opacity-60">
+          <h6 className="opacity-50">
             Our Latest Collection, where classic and contemporary styles
             converge in perfect harmony
           </h6>
